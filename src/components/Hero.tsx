@@ -6,13 +6,13 @@ const Hero = () => {
       <div className="flex justify-between items-center px-10">
         <div className="w-1/2">
           <div className="text-4xl flex leading-relaxed">
-            <span className="text-3xl font-semibold mr-2">"</span>
+            <span className="text-3xl font-semibold mr-2">&quot;</span>
             <h1 className="font-extralight">
-              You don't need magic to change the world; all it takes is an{" "}
+              You don&lsquo;t need magic to change the world; all it takes is an{" "}
               <span className="text-orange-500 font-normal">
                 act of kindness
               </span>
-              <span className="text-3xl font-semibold ml-2">"</span>
+              <span className="text-3xl font-semibold ml-2">&quot;</span>
             </h1>
           </div>
           <h1 className="text-xl font-semibold tracking-wide ml-5 mt-7">
