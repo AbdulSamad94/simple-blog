@@ -1,0 +1,142 @@
+[
+  {
+    "id": 1,
+    "title": "Getting Started with Next.js",
+    "author": "Ali Khan",
+    "date": "2024-10-15",
+    "content": "Next.js is a React framework that enables functionality like server-side rendering and static site generation. In this post, we'll cover the basics of getting started with Next.js and building your first project."
+  },
+  {
+    "id": 2,
+    "title": "Understanding the App Router in Next.js 14",
+    "author": "Sara Ahmed",
+    "date": "2024-10-20",
+    "content": "Next.js 14 introduced the App Router, a new routing method that makes navigation and layout management easier. This post explores its benefits and how you can set it up in your application."
+  },
+  {
+    "id": 3,
+    "title": "Integrating TailwindCSS with Next.js",
+    "author": "Ahmed Raza",
+    "date": "2024-10-25",
+    "content": "TailwindCSS is a popular utility-first CSS framework that integrates seamlessly with Next.js. This guide will walk you through installing and using TailwindCSS in a Next.js project to create responsive and modern designs."
+  },
+  {
+    "id": 4,
+    "title": "Deploying a Next.js App with Vercel",
+    "author": "Zara Khan",
+    "date": "2024-10-22",
+    "content": "Vercel is a great platform for deploying Next.js apps with ease. In this tutorial, we will guide you through deploying your app to Vercel step-by-step, and explain the advantages of using Vercel for Next.js projects."
+  },
+  {
+    "id": 5,
+    "title": "Creating Dynamic Routes in Next.js",
+    "author": "Omar Siddiqui",
+    "date": "2024-10-18",
+    "content": "Dynamic routing is a powerful feature in Next.js that enables the creation of flexible routes in your application. This post dives into dynamic routing and how to implement it effectively in your Next.js project."
+  },
+  {
+    "id": 6,
+    "title": "Setting Up Authentication in Next.js",
+    "author": "Fatima Baloch",
+    "date": "2024-10-14",
+    "content": "Adding authentication to your Next.js app can be done easily with libraries like NextAuth. This post explains how to configure authentication and manage user sessions securely."
+  },
+  {
+    "id": 7,
+    "title": "Using TypeScript in Next.js",
+    "author": "Bilal Javed",
+    "date": "2024-10-12",
+    "content": "TypeScript provides static typing and powerful tooling for JavaScript projects. Learn how to integrate TypeScript with Next.js to build more robust and maintainable applications."
+  },
+  {
+    "id": 8,
+    "title": "Server-Side Rendering with Next.js",
+    "author": "Farah Siddiqui",
+    "date": "2024-10-19",
+    "content": "Server-side rendering (SSR) improves performance and SEO. This post explores how to set up SSR in Next.js and understand its benefits and trade-offs."
+  },
+  {
+    "id": 9,
+    "title": "Static Site Generation in Next.js",
+    "author": "Zain Qureshi",
+    "date": "2024-10-23",
+    "content": "Static Site Generation (SSG) is one of the most efficient ways to deliver content in Next.js. This article explains SSG, how it works, and how to use it for building fast, SEO-friendly pages."
+  },
+  {
+    "id": 10,
+    "title": "Adding a CMS to Your Next.js App",
+    "author": "Ayesha Khan",
+    "date": "2024-10-21",
+    "content": "A CMS can make content management easier for Next.js applications. This guide introduces popular CMS options like Strapi and Sanity and demonstrates how to connect them with Next.js."
+  },
+  {
+    "id": 11,
+    "title": "Working with API Routes in Next.js",
+    "author": "Hamza Malik",
+    "date": "2024-10-10",
+    "content": "Next.js provides API routes for building serverless functions directly within the framework. This post explains how to create and use API routes for various tasks."
+  },
+  {
+    "id": 12,
+    "title": "SEO Optimization for Next.js Applications",
+    "author": "Noor Fatima",
+    "date": "2024-10-16",
+    "content": "SEO is crucial for the visibility of web applications. This post covers tips and best practices for optimizing Next.js applications for search engines."
+  },
+  {
+    "id": 13,
+    "title": "Using Framer Motion for Animations in Next.js",
+    "author": "Usman Tariq",
+    "date": "2024-10-17",
+    "content": "Framer Motion is a powerful animation library that integrates well with Next.js. In this post, learn how to create smooth animations and interactions using Framer Motion."
+  },
+  {
+    "id": 14,
+    "title": "Setting Up Environment Variables in Next.js",
+    "author": "Amin Hassan",
+    "date": "2024-10-11",
+    "content": "Environment variables allow you to store sensitive information securely. This guide explains how to set up and use environment variables in a Next.js project."
+  },
+  {
+    "id": 15,
+    "title": "Internationalization (i18n) in Next.js",
+    "author": "Mariam Ali",
+    "date": "2024-10-09",
+    "content": "Adding support for multiple languages can expand your app's reach. This post demonstrates how to implement internationalization in Next.js using built-in features."
+  },
+  {
+    "id": 16,
+    "title": "Handling Forms in Next.js",
+    "author": "Asim Khan",
+    "date": "2024-10-13",
+    "content": "Forms are essential for collecting user input. This article covers form handling in Next.js, including controlled and uncontrolled inputs, validation, and more."
+  },
+  {
+    "id": 17,
+    "title": "Optimizing Images in Next.js",
+    "author": "Rabia Mustafa",
+    "date": "2024-10-24",
+    "content": "Next.js provides built-in support for optimizing images, enhancing page load times. This post explores the Next.js Image component and how to use it effectively."
+  },
+  {
+    "id": 18,
+    "title": "Creating a Blog with Next.js and Markdown",
+    "author": "Haris Anwar",
+    "date": "2024-10-08",
+    "content": "Markdown makes content writing simple and flexible. This post walks you through building a blog in Next.js using Markdown for easy content management."
+  },
+  {
+    "id": 19,
+    "title": "Implementing Dark Mode in Next.js",
+    "author": "Emaan Mirza",
+    "date": "2024-10-07",
+    "content": "Dark mode is a popular feature that improves user experience. Learn how to add dark mode toggle functionality to your Next.js app in this post."
+  },
+  {
+    "id": 20,
+    "title": "Best Practices for Next.js Performance Optimization",
+    "author": "Yasir Ahmed",
+    "date": "2024-10-05",
+    "content": "Optimizing performance can improve your Next.js app’s loading times and user experience. This post covers tips and strategies for performance optimization in Next.js applications."
+  }
+]
