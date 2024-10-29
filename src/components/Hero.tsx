@@ -3,8 +3,8 @@ import Image from "next/image";
 const Hero = () => {
   return (
     <section className=" bg-slate-50">
-      <div className="flex justify-between items-center px-10">
-        <div className="w-1/2">
+      <div className="flex justify-between lg:flex-row flex-col items-center lg:px-10 px-3">
+        <div className="lg:w-1/2 mt-24 lg:mt-0">
           <div className="text-4xl flex leading-relaxed">
             <span className="text-3xl font-semibold mr-2">&quot;</span>
             <h1 className="font-extralight">

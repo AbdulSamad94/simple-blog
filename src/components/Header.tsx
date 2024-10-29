@@ -1,11 +1,20 @@
+"use client";
 import { Search } from "lucide-react";
-
+import Link from "next/link";
 const Header = () => {
+  const scrollToSection = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
   return (
-    <header className="py-6 px-7">
+    <header className="py-6 md:px-7">
       <div className="flex justify-between items-center px-8">
-        <div className="text-3xl font-bold">My Blog</div>
-        <div className="w-1/2 relative">
+        <Link href="/" className="lg:text-3xl text-2xl font-bold">
+          My Blog
+        </Link>
+        <div className="w-1/2 relative lg:block hidden">
           <input
             type="text"
             placeholder="looking for something?"
@@ -13,9 +22,14 @@ const Header = () => {
           />
           <Search className="absolute right-4 top-3 text-slate-500" size={28} />
         </div>
-        <div className="uppercase font-light flex gap-10 text-lg list-none">
-          <li>articles</li>
-          <li>Contact</li>
+        <div className="uppercase font-light flex items-center gap-10 md:text-lg list-none">
+          <li
+            className="cursor-pointer"
+            onClick={() => scrollToSection("featured")}
+          >
+            articles
+          </li>
+          <li className="cursor-pointer">Contact</li>
         </div>
       </div>
     </header>
