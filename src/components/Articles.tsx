@@ -9,18 +9,18 @@ import { Clock } from "lucide-react";
 const Articles = () => {
   const [load, setLoad] = useState(5);
   return (
-    <section className="mx-10 mt-10">
-      <h1 className="text-3xl tracking-tight font-bold uppercase my-8">
+    <section className="md:mx-10 mx-3 mt-10">
+      <h1 className="text-3xl md:text-left text-center tracking-tight font-bold uppercase my-16">
         Related Articles
       </h1>
       <div className="my-8 flex gap-10 flex-col">
         {posts.slice(0, load).map((item, index) => (
           <Link
             href={`/blog/${item.id}`}
-            className="flex justify-between gap-x-10"
+            className="flex justify-between lg:flex-row flex-col gap-x-10"
             key={index}
           >
-            <div className="w-[35%]">
+            <div className="lg:w-[35%]">
               <Image
                 className="h-96 w-[100%]"
                 width={300}
@@ -29,8 +29,8 @@ const Articles = () => {
                 alt="img"
               />
             </div>
-            <div className="w-9/12">
-              <h1 className="text-4xl leading-relaxed font-light">
+            <div className="lg:w-9/12 mt-8 lg:mt-0">
+              <h1 className="lg:text-4xl text-3xl lg:leading-relaxed font-light">
                 {item.title}
               </h1>
               <div className="my-5 flex gap-x-20">
@@ -43,7 +43,7 @@ const Articles = () => {
                   <p className="text-sm font-bold">{item.date}</p>
                 </div>
               </div>
-              <h2 className="text-2xl mt-8">
+              <h2 className="lg:text-2xl text-lg mt-8">
                 {item.content}{" "}
                 <span className="text-orange-400 font-bold">
                   ... continue reading

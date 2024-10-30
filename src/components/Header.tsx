@@ -29,7 +29,9 @@ const Header = () => {
           >
             articles
           </li>
-          <li className="cursor-pointer">Contact</li>
+          <Link href="/contact" className="cursor-pointer">
+            Contact
+          </Link>
         </div>
       </div>
     </header>

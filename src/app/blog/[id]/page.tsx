@@ -68,21 +68,23 @@ const Page = ({ params }: { params: Promise<{ id: string }> }) => {
   };
 
   return (
-    <section className="mx-10 px-14">
+    <section className="lg:mx-10 mx-3 lg:px-14">
       <div className="flex justify-center mt-10">
         <Image
           src={postDetail.image_url}
           width={800}
           height={800}
           alt="post-img"
-          className="w-full h-[500px] rounded-lg"
+          className="w-full lg:h-[500px] h-[400px] rounded-lg"
         />
       </div>
-      <div className="px-8">
-        <div className="mt-8 flex justify-between">
+      <div className="lg:px-8">
+        <div className="mt-8 flex justify-between lg:flex-row flex-col">
           <div>
-            <h1 className="text-5xl font-semibold">{postDetail.title}</h1>
-            <div className="my-5 flex gap-x-10">
+            <h1 className="lg:text-5xl text-3xl font-semibold">
+              {postDetail.title}
+            </h1>
+            <div className="my-5 flex lg:gap-x-10 gap-3 flex-wrap">
               <div className="flex gap-x-4 items-center">
                 <div className="w-8 h-8 bg-slate-300 rounded-full"></div>
                 <p className="uppercase font-bold">{postDetail.author}</p>
@@ -97,16 +99,20 @@ const Page = ({ params }: { params: Promise<{ id: string }> }) => {
               </div>
             </div>
           </div>
-          <div>
-            <div className="bg-slate-200 rounded-full px-2 py-2">
+          <div className="relative">
+            <div className="bg-slate-200 w-14 flex justify-center items-center h-14 rounded-full px-2 py-2">
               <Heart size={36} className="text-red-500 fill-red-500" />
             </div>
-            <p className="text-center font-bold mt-2 text-sm">32</p>
+            <p className="absolute -bottom-6 left-5 lg:relative font-bold text-sm">
+              32
+            </p>
           </div>
         </div>
         <div className="mt-16">
-          <h1 className="text-4xl font-bold">What is Lorem Ipsum?</h1>
-          <p className="text-2xl mt-8">
+          <h1 className="lg:text-4xl text-3xl font-bold">
+            What is Lorem Ipsum?
+          </h1>
+          <p className="lg:text-2xl mt-8">
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industrys standard dummy text
             ever since the 1500s, when an unknown printer took a galley of type
@@ -117,11 +123,13 @@ const Page = ({ params }: { params: Promise<{ id: string }> }) => {
             and more recently with desktop publishing software like Aldus
             PageMaker including versions of Lorem Ipsum.
           </p>
-          <div className="flex justify-center gap-x-16 mt-8">
-            <div className="bg-slate-200 w-1/3 h-96"></div>
-            <div className="w-3/4">
-              <h1 className="text-4xl font-bold">Why do we use it?</h1>
-              <p className="text-2xl mt-8">
+          <div className="flex justify-center gap-16 mt-8 lg:flex-row flex-col">
+            <div className="bg-slate-200 lg:w-1/3 h-96"></div>
+            <div className="lg:w-3/4">
+              <h1 className="lg:text-4xl text-3xl font-bold">
+                Why do we use it?
+              </h1>
+              <p className="lg:text-2xl mt-8">
                 It is a long established fact that a reader will be distracted
                 by the readable content of a page when looking at its layout.
                 The point of using Lorem Ipsum is that it has a more-or-less
@@ -135,8 +143,10 @@ const Page = ({ params }: { params: Promise<{ id: string }> }) => {
               </p>
             </div>
           </div>
-          <h1 className="text-4xl font-bold my-10">Where does it come from?</h1>
-          <p className="text-2xl mt-8">
+          <h1 className="lg:text-4xl text-3xl font-bold my-10">
+            Where does it come from?
+          </h1>
+          <p className="lg:text-2xl mt-8">
             Contrary to popular belief, Lorem Ipsum is not simply random text.
             It has roots in a piece of classical Latin literature from 45 BC,
             making it over 2000 years old. Richard McClintock, a Latin professor
@@ -150,7 +160,7 @@ const Page = ({ params }: { params: Promise<{ id: string }> }) => {
             Renaissance. The first line of Lorem Ipsum, Lorem ipsum dolor sit
             amet.., comes from a line in section 1.10.32.
           </p>
-          <p className="text-2xl mt-8">
+          <p className="lg:text-2xl mt-8">
             The standard chunk of Lorem Ipsum used since the 1500s is reproduced
             below for those interested. Sections 1.10.32 and 1.10.33 from de
             Finibus Bonorum et Malorum by Cicero are also reproduced in their

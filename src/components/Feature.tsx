@@ -15,11 +15,11 @@ import { Clock } from "lucide-react";
 const Feature = () => {
   return (
     <section className="lg:mx-12 mx-3">
-      <div className="text-3xl font-bold tracking-tight uppercase my-8">
+      <div className="text-3xl text-center md:text-start font-bold tracking-tight uppercase my-8">
         Featured
       </div>
       <Swiper
-        className="w-full lg:h-[500px] h-[550px] px-7 mx-10"
+        className="w-full lg:h-[500px] h-[550px] lg:px-7 lg:mx-10"
         modules={[Pagination, A11y]}
         a11y={{ enabled: true }}
         spaceBetween={50}
