@@ -5,11 +5,13 @@ import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Clock } from "lucide-react";
+import { motion } from "framer-motion";
 
 const Articles = () => {
   const [load, setLoad] = useState(5);
+
   return (
-    <section className="md:mx-10 mx-3 mt-10">
+    <section className="md:mx-10 mx-3 mt-10 overflow-hidden">
       <h1 className="text-3xl md:text-left text-center tracking-tight font-bold uppercase my-16">
         Related Articles
       </h1>
@@ -20,7 +22,13 @@ const Articles = () => {
             className="flex justify-between lg:flex-row flex-col gap-x-10"
             key={index}
           >
-            <div className="lg:w-[35%]">
+            <motion.div
+              className="lg:w-[35%]"
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6, delay: 0.5 }}
+              viewport={{ once: true }}
+            >
               <Image
                 className="h-96 w-[100%]"
                 width={300}
@@ -28,8 +36,14 @@ const Articles = () => {
                 src={item.image_url}
                 alt="img"
               />
-            </div>
-            <div className="lg:w-9/12 mt-8 lg:mt-0">
+            </motion.div>
+            <motion.div
+              className="lg:w-9/12 mt-8 lg:mt-0"
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6, delay: 0.8 }}
+              viewport={{ once: true }}
+            >
               <h1 className="lg:text-4xl text-3xl lg:leading-relaxed font-light">
                 {item.title}
               </h1>
@@ -49,7 +63,7 @@ const Articles = () => {
                   ... continue reading
                 </span>
               </h2>
-            </div>
+            </motion.div>
           </Link>
         ))}
       </div>
