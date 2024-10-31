@@ -4,7 +4,6 @@ import posts from "@/data/posts.json";
 import { use } from "react";
 import Image from "next/image";
 import { useState, useRef } from "react";
-import { motion, useInView } from "framer-motion";
 import { Clock, Heart, Eye } from "lucide-react";
 import React from "react";
 
@@ -53,7 +52,6 @@ const Page = ({ params }: { params: Promise<{ id: string }> }) => {
   const [commentContent, setCommentContent] = useState("");
 
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true });
 
   if (!postDetail) {
     return <p className="text-center text-red-600">Post not found</p>;
@@ -73,12 +71,7 @@ const Page = ({ params }: { params: Promise<{ id: string }> }) => {
 
   return (
     <section className="lg:mx-10 mx-3 lg:px-14">
-      <motion.div
-        className="flex justify-center mt-10"
-        initial={{ opacity: 0, scale: 0.9 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.8 }}
-      >
+      <div className="flex justify-center mt-10">
         <Image
           src={postDetail.image_url}
           width={800}
@@ -86,15 +79,9 @@ const Page = ({ params }: { params: Promise<{ id: string }> }) => {
           alt="post-img"
           className="w-full lg:h-[500px] h-[400px] rounded-lg"
         />
-      </motion.div>
+      </div>
 
-      <motion.div
-        className="lg:px-8"
-        initial={{ x: -50, opacity: 0 }}
-        animate={isInView ? { x: 0, opacity: 1 } : {}}
-        transition={{ duration: 0.6 }}
-        ref={ref}
-      >
+      <div className="lg:px-8">
         <div className="mt-8 flex justify-between lg:flex-row flex-col">
           <div>
             <h1 className="lg:text-5xl text-3xl font-semibold">
@@ -115,27 +102,17 @@ const Page = ({ params }: { params: Promise<{ id: string }> }) => {
               </div>
             </div>
           </div>
-          <motion.div
-            className="relative"
-            initial={{ scale: 0.8, opacity: 0 }}
-            animate={{ scale: 1, opacity: 1 }}
-            transition={{ delay: 0.5, duration: 0.6 }}
-          >
+          <div className="relative">
             <div className="bg-slate-200 w-14 flex justify-center items-center h-14 rounded-full px-2 py-2">
               <Heart size={36} className="text-red-500 fill-red-500" />
             </div>
             <p className="absolute -bottom-6 left-5 lg:relative font-bold text-sm">
               32
             </p>
-          </motion.div>
+          </div>
         </div>
 
-        <motion.div
-          className="mt-16"
-          initial={{ y: 50, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.7 }}
-        >
+        <div className="mt-16">
           <h1 className="lg:text-4xl text-3xl font-bold">
             What is Lorem Ipsum?
           </h1>
@@ -150,13 +127,8 @@ const Page = ({ params }: { params: Promise<{ id: string }> }) => {
             and more recently with desktop publishing software like Aldus
             PageMaker including versions of Lorem Ipsum.
           </p>
-        </motion.div>
-        <motion.div
-          className="mt-16"
-          initial={{ y: 50, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.7 }}
-        >
+        </div>
+        <div className="mt-16">
           <h1 className="lg:text-4xl text-3xl font-bold">Why do we use it?</h1>
           <p className="lg:text-2xl mt-8">
             It is a long established fact that a reader will be distracted by
@@ -170,17 +142,12 @@ const Page = ({ params }: { params: Promise<{ id: string }> }) => {
             years, sometimes by accident, sometimes on purpose (injected humour
             and the like).
           </p>
-        </motion.div>
+        </div>
         {/* Additional content animations */}
-      </motion.div>
+      </div>
 
       {/* Comment section with animation */}
-      <motion.div
-        className="mt-12"
-        initial={{ y: 50, opacity: 0 }}
-        animate={isInView ? { y: 0, opacity: 1 } : {}}
-        transition={{ delay: 0.4, duration: 0.6 }}
-      >
+      <div className="mt-12">
         <h2 className="text-3xl font-bold mb-4">Leave a Comment</h2>
         <input
           type="text"
@@ -201,19 +168,16 @@ const Page = ({ params }: { params: Promise<{ id: string }> }) => {
         >
           Submit
         </button>
-      </motion.div>
+      </div>
 
       {/* Display Comments */}
       <div className="my-8">
         <h2 className="text-2xl font-semibold mb-4">Comments</h2>
         {comments.length > 0 ? (
           comments.map((comment, index) => (
-            <motion.div
+            <div
               key={index}
               className="mb-4 p-4 border border-gray-200 rounded-lg shadow-sm"
-              initial={{ x: -30, opacity: 0 }}
-              animate={{ x: 0, opacity: 1 }}
-              transition={{ delay: index * 0.2 }}
             >
               <div className="flex gap-x-10 mb-8 items-center">
                 <p className="font-bold text-xl text-gray-800">
@@ -224,7 +188,7 @@ const Page = ({ params }: { params: Promise<{ id: string }> }) => {
                 </p>
               </div>
               <p>{comment.content}</p>
-            </motion.div>
+            </div>
           ))
         ) : (
           <p className="text-gray-500">

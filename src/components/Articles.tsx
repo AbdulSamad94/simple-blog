@@ -5,7 +5,6 @@ import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Clock } from "lucide-react";
-import { motion } from "framer-motion";
 
 const Articles = () => {
   const [load, setLoad] = useState(5);
@@ -22,13 +21,7 @@ const Articles = () => {
             className="flex justify-between lg:flex-row flex-col gap-x-10"
             key={index}
           >
-            <motion.div
-              className="lg:w-[35%]"
-              initial={{ opacity: 0, x: -50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6, delay: 0.5 }}
-              viewport={{ once: true }}
-            >
+            <div className="lg:w-[35%]">
               <Image
                 className="h-96 w-[100%]"
                 width={300}
@@ -36,14 +29,8 @@ const Articles = () => {
                 src={item.image_url}
                 alt="img"
               />
-            </motion.div>
-            <motion.div
-              className="lg:w-9/12 mt-8 lg:mt-0"
-              initial={{ opacity: 0, x: 50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6, delay: 0.8 }}
-              viewport={{ once: true }}
-            >
+            </div>
+            <div className="lg:w-9/12 mt-8 lg:mt-0">
               <h1 className="lg:text-4xl text-3xl lg:leading-relaxed font-light">
                 {item.title}
               </h1>
@@ -63,7 +50,7 @@ const Articles = () => {
                   ... continue reading
                 </span>
               </h2>
-            </motion.div>
+            </div>
           </Link>
         ))}
       </div>

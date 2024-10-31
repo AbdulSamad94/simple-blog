@@ -11,20 +11,13 @@ import "swiper/css";
 import "swiper/css/pagination";
 
 import { Clock } from "lucide-react";
-import { motion } from "framer-motion";
 
 const Feature = () => {
   return (
     <section className="lg:mx-12 mx-3">
-      <motion.div
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.8 }}
-        className="text-3xl text-center md:text-start font-bold tracking-tight uppercase my-8"
-      >
+      <div className="text-3xl text-center md:text-start font-bold tracking-tight uppercase my-8">
         Featured
-      </motion.div>
+      </div>
       <Swiper
         className="w-full lg:h-[500px] h-[550px] lg:px-7 lg:mx-10"
         modules={[Pagination, A11y]}
@@ -39,13 +32,7 @@ const Feature = () => {
               href={`/blog/${item.id}`}
               className="flex justify-between lg:flex-row flex-col gap-x-7 "
             >
-              <motion.div
-                className="overflow-hidden shadow shadow-black rounded-lg"
-                initial={{ opacity: 0, x: -40 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5 }}
-              >
+              <div className="overflow-hidden shadow shadow-black rounded-lg">
                 <Image
                   width={700}
                   height={700}
@@ -53,14 +40,8 @@ const Feature = () => {
                   alt="imgs"
                   className="hover:scale-110 transition-all duration-300"
                 />
-              </motion.div>
-              <motion.div
-                className="lg:w-1/2"
-                initial={{ opacity: 0, x: 200 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.8, delay: 0.3 }}
-              >
+              </div>
+              <div className="lg:w-1/2">
                 <h1 className="lg:text-4xl mt-4 md:mt-0 text-2xl lg:leading-relaxed font-light">
                   {item.title}
                 </h1>
@@ -80,7 +61,7 @@ const Feature = () => {
                     ... continue reading
                   </span>
                 </h2>
-              </motion.div>
+              </div>
             </Link>
           </SwiperSlide>
         ))}
