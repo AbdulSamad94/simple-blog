@@ -6,6 +6,7 @@ import Image from "next/image";
 import { useState, useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import { Clock, Heart, Eye } from "lucide-react";
+import React from "react";
 
 type posts = {
   id: number;
