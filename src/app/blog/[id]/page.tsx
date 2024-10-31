@@ -3,7 +3,7 @@
 import posts from "@/data/posts.json";
 import { use } from "react";
 import Image from "next/image";
-import { useState, useRef } from "react";
+import { useState } from "react";
 import { Clock, Heart, Eye } from "lucide-react";
 import React from "react";
 
@@ -50,8 +50,6 @@ const Page = ({ params }: { params: Promise<{ id: string }> }) => {
   const [comments, setComments] = useState<Comment[]>([]);
   const [user, setUser] = useState("");
   const [commentContent, setCommentContent] = useState("");
-
-  const ref = useRef(null);
 
   if (!postDetail) {
     return <p className="text-center text-red-600">Post not found</p>;
